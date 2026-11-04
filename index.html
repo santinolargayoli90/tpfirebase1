@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Venta de celulares</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="" src="index.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Venta de celulares</h1>
+    <p>Registrar y consultar productos</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Registrar un celular</h2>
+      <form id="formulario-celular">
+        <input id="codigo" type="text" placeholder="Codigo del producto (ejemplo: CEL001)" required />
+        <input id="marca" type="text" placeholder="Marca" required />
+        <input id="modelo" type="text" placeholder="Modelo" required />
+        <input id="almacenamiento" type="text" placeholder="Almacenamiento (ejemplo: 128 GB)" required />
+        <input id="precio" type="number" min="0" step="0.01" placeholder="Precio" required />
+        <button type="button" id="agregar">Guardar celular</button>
+      </form>
+      <p id="mensaje" role="status"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Celulares disponibles</h2>
+      <div class="tabla-contenedor">
+        <table>
+          <thead>
+            <tr>
+              <th>Codigo</th>
+              <th>Marca</th>
+              <th>Modelo</th>
+              <th>Almacenamiento</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody id="lista-celulares"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>SL Phones</p>
+  </footer>
+</body>
+</html>
